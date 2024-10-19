@@ -18,6 +18,7 @@ dotnet add $projectName".Infrastrucure" reference $projectName".Application"
 dotnet add $projectName".Application" reference $projectName".Domain"
 
 #creating the solution
+cd ..
 dotnet new sln --name $projectName
 
 #adding the projects to the solution
