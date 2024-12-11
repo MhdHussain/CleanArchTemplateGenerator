@@ -15,6 +15,7 @@ dotnet new classlib -o $projectName".Domain"
 
 # adding the references
 dotnet add $projectName".APi" reference $projectName".Application"
+dotnet add $projectName".APi" reference $projectName".Contracts"
 dotnet add $projectName".Infrastrucure" reference $projectName".Application"
 dotnet add $projectName".Application" reference $projectName".Domain"
 
