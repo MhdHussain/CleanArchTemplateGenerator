@@ -16,6 +16,8 @@ dotnet new classlib -o $projectName".Domain"
 # adding the references
 dotnet add $projectName".APi" reference $projectName".Application"
 dotnet add $projectName".APi" reference $projectName".Contracts"
+#referencing the infrastructure from API for the purpose of wiring the dependency injection IoC container
+dotnet add $projectName".APi" reference $projectName".Infrastrucure"
 dotnet add $projectName".Infrastrucure" reference $projectName".Application"
 dotnet add $projectName".Application" reference $projectName".Domain"
 
