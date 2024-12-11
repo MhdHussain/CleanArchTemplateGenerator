@@ -8,6 +8,7 @@ cd src
 
 #creating the projects
 dotnet new webapi -n $projectName".Api" --use-controllers
+dotnet new classlib -o $projectName".Contracts" 
 dotnet new classlib -o $projectName".Application"
 dotnet new classlib -o $projectName".Infrastrucure"
 dotnet new classlib -o $projectName".Domain"
