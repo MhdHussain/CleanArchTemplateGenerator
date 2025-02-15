@@ -7,7 +7,7 @@ cd src
 
 
 #creating the projects
-dotnet new webapi -n $projectName".Api" --use-controllers
+dotnet new webapi -n $projectName".Api"  --use-controllers
 dotnet new classlib -o $projectName".Contracts" 
 dotnet new classlib -o $projectName".Application"
 dotnet new classlib -o $projectName".Infrastrucure"
@@ -27,6 +27,16 @@ dotnet new sln --name $projectName
 
 #adding the projects to the solution
 dotnet sln add (ls -r **/**.csproj) 
+
+# ADDING PACKAGES
+## adding dependency injection
+dotnet add $projectName".Application" package Microsoft.Extensions.DependencyInjection
+dotnet add $projectName".Infrastrucure" package Microsoft.Extensions.DependencyInjection
+
+## adding MediatR
+dotnet add $projectName".Application" package MediatR # same package can be used in the API layer cause API depends on Application
+
+
 
 #building the project
 dotnet build
