@@ -30,11 +30,12 @@ dotnet sln add (ls -r **/**.csproj)
 
 # ADDING PACKAGES
 ## adding dependency injection
-dotnet add $projectName".Application" package Microsoft.Extensions.DependencyInjection
-dotnet add $projectName".Infrastrucure" package Microsoft.Extensions.DependencyInjection
+dotnet add src/$projectName".Application" package Microsoft.Extensions.DependencyInjection
+dotnet add src/$projectName".Infrastrucure" package Microsoft.Extensions.DependencyInjection
+
 
 ## adding MediatR
-dotnet add $projectName".Application" package MediatR # same package can be used in the API layer cause API depends on Application
+dotnet add src/$projectName".Application" package MediatR # same package can be used in the API layer cause API depends on Application
 
 
 
