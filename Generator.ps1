@@ -36,7 +36,7 @@ dotnet add src/$projectName".Infrastrucure" package Microsoft.Extensions.Depende
 
 ## adding MediatR
 dotnet add src/$projectName".Application" package MediatR # same package can be used in the API layer cause API depends on Application
-
+dotnet add src/$projectName".Application" package ErrorOr 
 
 
 #building the project
